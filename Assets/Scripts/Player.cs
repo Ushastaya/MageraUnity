@@ -7,19 +7,36 @@ namespace MyGames
 {
     public class Player : MonoBehaviour
     {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         [SerializeField] private float _durability = 30;
 
-        [SerializeField] private float _speed = 2f; // Скорость движения, а в дальнейшем ускорение
-        private Vector3 _direction; // Направление движения
-        private bool _isSprint; // Ускорение
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+        [SerializeField] private float _speed = 2f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        private Vector3 _direction; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        private bool _isSprint; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        [SerializeField] public float speedRotate = 500f;
 
+        // пїЅпїЅпїЅпїЅпїЅпїЅ
+        public bool isGrounded;
+
+        // пїЅпїЅпїЅпїЅпїЅ 1
         [SerializeField] private GameObject _fire;
         [SerializeField] private Transform _fireSpawnPosition;
 
-        [SerializeField] public float speedRotate = 500f;
 
-        [SerializeField] private GameObject _key;
-        [SerializeField] private Transform _target;
+        [SerializeField] private GameObject _gran;
+        [SerializeField] private Transform _granSpawnPosition;
+        private float _granPushForce = 40f;
+        private float _granLifeTime = 5f;
+        private float _granFireDelay = 5f;
+        private float _granFireTime = -50f;
+
+
+        void OnCollisionEnter()
+        {
+            isGrounded = true;
+        }
+
 
         private void Update()
         {
@@ -27,19 +44,35 @@ namespace MyGames
             _direction.z = Input.GetAxis("Vertical");
             _isSprint = Input.GetButton("Sprint");
 
+            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * speedRotate * Time.fixedDeltaTime, 0));
 
             if (Input.GetKey(KeyCode.Escape))
 
             {
-                UnityEditor.EditorApplication.isPlaying = false; // Кнопка выхода
+                UnityEditor.EditorApplication.isPlaying = false; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             }
 
-            if (Input.GetButton("Fire1"))
+            //if (Input.GetButton("Fire1"))
+            //{
+            //    SpawnFire();
+            //}
+
+            //if (Input.GetButton("G"))
+            //{
+            //    SpawnGran();
+            //}
+
+            if (Input.GetButton("Jump") && isGrounded)
             {
-                SpawnFire();
+                isGrounded = false;
+                GetComponent<Rigidbody>().AddForce(new Vector3(0, 210, 0));
             }
 
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * speedRotate * Time.fixedDeltaTime, 0));
+            //if (Input.GetKeyDown("G"))
+            //{
+            //    Transform magicgran = Instantiate(_gran, _fireSpawnPosition.position, _fireSpawnPosition.rotation, Quaternion.identity) as Transform;
+            //    magicgran.GetComponent<Rigidbody>().AddForce(transform.forward * speedGran);
+            //}
         }
 
         private void FixedUpdate()
@@ -50,31 +83,38 @@ namespace MyGames
             {
                 SpawnFire();
             }
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                SpawnGran();
+            }
         }
 
         private void Move(float delta)
         {
             var fixedDirection = transform.TransformDirection(_direction.normalized);
-            transform.position += fixedDirection * (_isSprint ? _speed * 2 : _speed) * delta; // метод движения с условием нажата ли кнопка ускорения?
+            transform.position += fixedDirection * (_isSprint ? _speed * 2 : _speed) * delta; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ?
         }
 
         private void SpawnFire()
         {
-            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation); // Создаем мину в точке спавна
+            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             var fireboom = fireObj.GetComponent<Fire>();
             fireboom.Init(durability: 10);
         }
 
-        //public void Hit(float damage)
-        //{
+        private void SpawnGran()
+        {
+                        
+            
+                //_granFireTime = Time.time;
+                GameObject granObject = Instantiate(_gran, _granSpawnPosition.position + new Vector3(0, 1f, 0.51f), _granSpawnPosition.rotation);
+                Gran gran = granObject.GetComponent<Gran>();
+                gran.Init(_granPushForce, _granLifeTime);
+            
 
-        //    _durability -= damage;
-        //    if (_durability <= 0)
-        //    {
-        //        Destroy(gameObject);
-        //    }
+        }
 
-        //}
     }
 
 }

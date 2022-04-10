@@ -445,9 +445,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,9 +506,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -782,11 +790,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durability: 50
   _speed: 2
+  speedRotate: 500
+  isGrounded: 1
   _fire: {fileID: 197496, guid: 07fc91084213d9a4e816125c3a32450d, type: 3}
   _fireSpawnPosition: {fileID: 113604731}
-  speedRotate: 500
-  _key: {fileID: 1395183151}
-  _target: {fileID: 1395183156}
+  _gran: {fileID: 5662333279100532861, guid: d9449dcf4f9e2a64e84d9337dcb438eb, type: 3}
+  _granSpawnPosition: {fileID: 113604731}
 --- !u!54 &113604733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -832,7 +841,7 @@ Transform:
   m_Children:
   - {fileID: 1395183156}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119410988
 GameObject:
@@ -1095,9 +1104,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1151,6 +1164,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -1233,9 +1250,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2092,9 +2113,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2335,9 +2360,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2758,8 +2787,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 135341312422386914, guid: cdc64358fb600b94c83082531a9b43af, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135341312422386914, guid: cdc64358fb600b94c83082531a9b43af, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdc64358fb600b94c83082531a9b43af, type: 3}
@@ -2790,7 +2823,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 346554611}
   - {fileID: 844287303}
   - {fileID: 275040566}
   - {fileID: 950709207}
@@ -2849,36 +2881,6 @@ Transform:
   - {fileID: 1871610518}
   m_Father: {fileID: 2060912639}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &346554610
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 346554611}
-  m_Layer: 0
-  m_Name: Traps
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &346554611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346554610}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 342979927}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &347758331
 PrefabInstance:
@@ -3077,9 +3079,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3501,9 +3507,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3934,7 +3944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edc89b7f38231d5449d2606e44d527af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: edc89b7f38231d5449d2606e44d527af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4366,6 +4376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -4598,9 +4612,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4944,9 +4962,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5030,9 +5052,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5168,9 +5194,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5335,9 +5365,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5447,6 +5481,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -5568,14 +5606,14 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3403243154582955757, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
---- !u!4 &603535638 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3448898420728702985, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
-  m_PrefabInstance: {fileID: 603535637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &603535639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3446714410595012511, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
+  m_PrefabInstance: {fileID: 603535637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &603535640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3448898420728702985, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
   m_PrefabInstance: {fileID: 603535637}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &603535641
@@ -5726,6 +5764,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
+--- !u!54 &642010130
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642010127}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &642010131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642010127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5469328, y: 0.8000001, z: 0.5212426}
+  m_Center: {x: 0.0011856705, y: 0.40000007, z: -0.015381723}
 --- !u!1001 &647242340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5818,9 +5885,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6348,6 +6419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -6603,9 +6678,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6765,6 +6844,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6822,9 +6905,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6903,9 +6990,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7170,9 +7261,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7527,6 +7622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7583,6 +7682,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -8238,9 +8341,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8375,6 +8482,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -8619,9 +8730,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9041,8 +9156,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
   m_PrefabInstance: {fileID: 874513458}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &874513461
-MeshCollider:
+--- !u!65 &874513461
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9051,10 +9166,25 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.5129294, y: 0.79999995, z: 0.5118427}
+  m_Center: {x: 0.016192347, y: 0.39999998, z: -0.006545067}
+--- !u!54 &874513464
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874513460}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &876832353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9374,11 +9504,40 @@ MeshCollider:
   m_GameObject: {fileID: 900784689}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
+--- !u!54 &900784693
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900784689}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &900784694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900784689}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5106746, y: 0.79999995, z: 0.5159993}
+  m_Center: {x: -0.0035780072, y: 0.39999998, z: 0.00066542625}
 --- !u!1 &913017334
 GameObject:
   m_ObjectHideFlags: 0
@@ -9460,9 +9619,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9963,6 +10126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -10100,6 +10267,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -10360,9 +10531,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11024,6 +11199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -11199,9 +11378,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11304,9 +11487,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11466,6 +11653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -11523,9 +11714,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11743,6 +11938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -11946,6 +12145,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -12523,6 +12726,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: d5ebfcb780598a54b830d1afcc9c9103, type: 3}
+--- !u!65 &1227492823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227492821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5072737, y: 0.79999995, z: 0.547966}
+  m_Center: {x: 0.005505562, y: 0.39999998, z: 0.0029935837}
+--- !u!54 &1227492824
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227492821}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1248820796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12720,9 +12952,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12800,6 +13036,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -12903,9 +13143,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12959,6 +13203,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -13016,6 +13264,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -13098,9 +13350,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13260,9 +13516,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13429,9 +13689,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13533,6 +13797,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -13867,8 +14135,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1395183158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395183151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85443676, y: 0.0770914, z: 0.29510808}
+  m_Center: {x: 0.0000038146973, y: 0.00000023841858, z: 0}
 --- !u!1001 &1412800088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13880,9 +14161,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14042,9 +14327,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14237,9 +14526,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14362,6 +14655,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -14614,7 +14911,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 26aec004d42c0a640bf94c71b19365ec, type: 3}
---- !u!4 &1473045247 stripped
+--- !u!4 &1473045244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3448898420728702985, guid: 42f5b8b4164f34742b8c57d67a552c46, type: 3}
   m_PrefabInstance: {fileID: 1210712046}
@@ -14636,7 +14933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ecde3c6a9545943bebd5e84de20d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotatePoint: {fileID: 1473045247}
+  _rotatePoint: {fileID: 1473045244}
 --- !u!64 &1475866758
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14968,9 +15265,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15120,9 +15421,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15179,7 +15484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715476648483898, guid: 59c7078d344dfe94f97e849fe4f0dce0, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4715476648483898, guid: 59c7078d344dfe94f97e849fe4f0dce0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15675,6 +15980,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 481b635407ffb1f4c9f82ae6f468e377, type: 3}
+--- !u!136 &1596099235
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596099233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0764492
+  m_Height: 0.27246112
+  m_Direction: 1
+  m_Center: {x: -0.0008090291, y: -0.0028691106, z: 0.019057767}
+--- !u!54 &1596099236
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596099233}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1606944393
 GameObject:
   m_ObjectHideFlags: 0
@@ -15818,6 +16153,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -15988,9 +16327,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16069,9 +16412,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16150,9 +16497,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16344,9 +16695,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16449,9 +16804,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16668,9 +17027,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16830,9 +17193,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17016,9 +17383,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17226,9 +17597,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17607,9 +17982,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17775,7 +18154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ecde3c6a9545943bebd5e84de20d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotatePoint: {fileID: 603535638}
+  _rotatePoint: {fileID: 603535640}
 --- !u!65 &1812421117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18219,9 +18598,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18300,6 +18683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -18357,9 +18744,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18437,6 +18828,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_Name
       value: floor_A (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
@@ -18787,9 +19182,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19158,9 +19557,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19389,9 +19792,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19470,9 +19877,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19575,9 +19986,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19656,9 +20071,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19847,9 +20266,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20032,9 +20455,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20089,9 +20516,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_A (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ca67efe11d80b148b8a350656cb158d, type: 3}
       propertyPath: m_LocalPosition.x

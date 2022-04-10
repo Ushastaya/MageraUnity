@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Fire
   - Key
+  - Ground
   layers:
   - Default
   - TransparentFX
