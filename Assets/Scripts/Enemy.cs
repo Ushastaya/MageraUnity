@@ -16,6 +16,17 @@ namespace MyGames
         [SerializeField] private GameObject _bullet;
         [SerializeField] private Transform _SpawnPosition;
 
+
+        [SerializeField] private Animator _anim;
+        private bool fire1;
+
+        private void Awake()
+        {
+
+            _anim = GetComponent<Animator>();
+
+        }
+
         void Start()
         {
             _player = FindObjectOfType<Player>();
@@ -29,8 +40,14 @@ namespace MyGames
             if ((Vector3.Distance(transform.position, _player.transform.position) < 3.5))
             {
                 Fire();
+                fire1 = true;
+            }
+            else 
+            {
+                fire1 = false;
             }
 
+            _anim.SetBool("isFire", fire1 == true);
         }
 
         void FixedUpdate()

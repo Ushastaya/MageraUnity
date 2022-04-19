@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23336789154553644}
   - component: {fileID: 135978377405755452}
   - component: {fileID: 478741287045597854}
+  - component: {fileID: 4592620460392656497}
   m_Layer: 2
   m_Name: HealthPlusRed
   m_TagString: Untagged
@@ -110,3 +111,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate: 1
   rotationSpeed: 10
+--- !u!111 &4592620460392656497
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932252988361774}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0

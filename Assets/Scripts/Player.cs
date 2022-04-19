@@ -7,21 +7,18 @@ namespace MyGames
 {
     public class Player : MonoBehaviour
     {
-        // ���������
         [SerializeField] private float _durability = 30;
 
-        // �������� ������
-        [SerializeField] private float _speed = 2f; // �������� ��������, � � ���������� ���������
-        private Vector3 _direction; // ����������� ��������
-        private bool _isSprint; // ���������
+        [SerializeField] private float _speed = 2f;
+        private Vector3 _direction;
+        private bool _isSprint;
         [SerializeField] public float speedRotate = 500f;
 
-        // ������
         public bool isGrounded;
 
-        // ����� 1
         [SerializeField] private GameObject _fire;
         [SerializeField] private Transform _fireSpawnPosition;
+        private bool Fire;
 
 
         [SerializeField] private GameObject _gran;
@@ -31,6 +28,14 @@ namespace MyGames
         private float _granFireDelay = 5f;
         private float _granFireTime = -50f;
 
+        [SerializeField] private Animator _anim;
+
+        private void Awake()
+        {
+
+            _anim = GetComponent<Animator>();
+
+        }
 
         void OnCollisionEnter()
         {
@@ -49,18 +54,9 @@ namespace MyGames
             if (Input.GetKey(KeyCode.Escape))
 
             {
-                UnityEditor.EditorApplication.isPlaying = false; // ������ ������
+                UnityEditor.EditorApplication.isPlaying = false;
             }
 
-            //if (Input.GetButton("Fire1"))
-            //{
-            //    SpawnFire();
-            //}
-
-            //if (Input.GetButton("G"))
-            //{
-            //    SpawnGran();
-            //}
 
             if (Input.GetButton("Jump") && isGrounded)
             {
@@ -68,11 +64,9 @@ namespace MyGames
                 GetComponent<Rigidbody>().AddForce(new Vector3(0, 210, 0));
             }
 
-            //if (Input.GetKeyDown("G"))
-            //{
-            //    Transform magicgran = Instantiate(_gran, _fireSpawnPosition.position, _fireSpawnPosition.rotation, Quaternion.identity) as Transform;
-            //    magicgran.GetComponent<Rigidbody>().AddForce(transform.forward * speedGran);
-            //}
+            _anim.SetBool("isGo", _direction != Vector3.zero);
+            _anim.SetBool("isJump", isGrounded == false);
+            _anim.SetBool("isFire", Fire == true);
         }
 
         private void FixedUpdate()
@@ -82,6 +76,11 @@ namespace MyGames
             if (Input.GetButtonDown("Fire1"))
             {
                 SpawnFire();
+                Fire = true;
+            }
+            else
+            {
+                Fire = false;
             }
 
             if (Input.GetKeyDown(KeyCode.G))
@@ -93,12 +92,12 @@ namespace MyGames
         private void Move(float delta)
         {
             var fixedDirection = transform.TransformDirection(_direction.normalized);
-            transform.position += fixedDirection * (_isSprint ? _speed * 2 : _speed) * delta; // ����� �������� � �������� ������ �� ������ ���������?
+            transform.position += fixedDirection * (_isSprint ? _speed * 2 : _speed) * delta;
         }
 
         private void SpawnFire()
         {
-            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation); // ������� ���� � ����� ������
+            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation); 
             var fireboom = fireObj.GetComponent<Fire>();
             fireboom.Init(durability: 10);
         }

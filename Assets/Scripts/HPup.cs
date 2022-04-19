@@ -10,13 +10,13 @@ namespace MyGames
 
         public float rotationSpeed;
 
-        void Update()
-        {
+        //void Update()
+        //{
 
-            if (rotate)
-                transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
+        //    if (rotate)
+        //        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
 
-        }
+        //}
 
         private void OnTriggerEnter(Collider other)
         {
