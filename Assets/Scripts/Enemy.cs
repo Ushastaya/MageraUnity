@@ -15,55 +15,67 @@ namespace MyGames
 
         [SerializeField] private GameObject _bullet;
         [SerializeField] private Transform _SpawnPosition;
-
+        [SerializeField] private Transform _SpawnPosition1;
 
         [SerializeField] private Animator _anim;
         private bool fire1;
+        private bool isPaus1 = false;
 
         private void Awake()
         {
 
             _anim = GetComponent<Animator>();
-
-        }
-
-        void Start()
-        {
             _player = FindObjectOfType<Player>();
-            
+
         }
 
         void Update()
         {
 
+            Ray ray = new Ray(_SpawnPosition1.position, transform.forward);
 
-            if ((Vector3.Distance(transform.position, _player.transform.position) < 3.5))
+            if (Physics.Raycast(ray, out RaycastHit hit, 3))
             {
-                Fire();
-                fire1 = true;
-            }
-            else 
-            {
-                fire1 = false;
+                if (hit.collider.CompareTag("Player") && !isPaus1)
+                {
+                    Fire();
+                    fire1 = true;
+                }
+                else
+                {
+                    fire1 = false;
+                }
             }
 
             _anim.SetBool("isFire", fire1 == true);
+
         }
 
         void FixedUpdate()
         {
-
-            var direction = _player.transform.position - transform.position;
-            var stepRotate = Vector3.RotateTowards(transform.forward, direction, _speedRotate * Time.fixedDeltaTime, 0f);
-            transform.rotation = Quaternion.LookRotation(stepRotate);
+            if (Vector3.Distance(transform.position, _player.transform.position) < 3.0f)
+            {
+                var direction = _player.transform.position - transform.position;
+                var stepRotate = Vector3.RotateTowards(transform.forward, direction, _speedRotate * Time.fixedDeltaTime, 0f);
+                transform.rotation = Quaternion.LookRotation(stepRotate);
+            }           
 
         }
 
         private void Fire()
         {
-            var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation); // Создаем мину в точке спавна
+            var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation); 
             var bullet = bulletObj.GetComponent<Bullet>();
             bullet.Init(_player.transform, 0.5f, 4f);
+            StartCoroutine(Pauza());
+        }
+
+
+        private IEnumerator Pauza()
+        {
+            isPaus1 = true;
+            yield return new WaitForSeconds(3f);
+            isPaus1 = false;
         }
 
         public void Hit(float damage)
