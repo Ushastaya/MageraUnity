@@ -5,9 +5,7 @@ using UnityEngine;
 namespace MyGames
 {
     public class DoorAOpen : MonoBehaviour
-    {
-        //[SerializeField] private Transform _rotatePoint;
-
+    {       
         [SerializeField] private Animator _anim;
 
         private void Awake()
@@ -21,8 +19,7 @@ namespace MyGames
         {
             if (other.CompareTag("Player"))
             {
-                _anim.SetBool("isOpen", true);
-                //_rotatePoint.Rotate(Vector3.up, 90);
+                _anim.SetBool("isOpen", true);               
             }
 
         }
@@ -31,8 +28,7 @@ namespace MyGames
 
             if (other.CompareTag("Player"))
             {
-                _anim.SetBool("isOpen", false);
-                //_rotatePoint.Rotate(Vector3.up, -90);
+                _anim.SetBool("isOpen", false);               
             }
         }
     }

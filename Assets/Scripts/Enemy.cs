@@ -19,7 +19,7 @@ namespace MyGames
 
         [SerializeField] private Animator _anim;
         private bool fire1;
-        private bool isPaus1 = false;
+        private bool isPaus1 = false;        
 
         private void Awake()
         {
@@ -66,7 +66,7 @@ namespace MyGames
         {
             var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation); 
             var bullet = bulletObj.GetComponent<Bullet>();
-            bullet.Init(_player.transform, 0.5f, 4f);
+            bullet.Init(_player.transform, 2f, 3f);
             StartCoroutine(Pauza());
         }
 

@@ -6,9 +6,7 @@ using UnityEngine;
 namespace MyGames
 {
     public class TakeOther : MonoBehaviour
-    {
-
-        private float _durability = 10;
+    {              
 
         private void OnTriggerStay(Collider other)
         {

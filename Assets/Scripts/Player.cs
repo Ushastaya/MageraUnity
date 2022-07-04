@@ -1,34 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace MyGames
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private float _durability = 30;
-
-        [SerializeField] private float _speed = 2f;
+       
+        [SerializeField] private float _speed = 1f;
         private Vector3 _direction;
         private bool _isSprint;
         [SerializeField] public float speedRotate = 500f;
 
-        public bool isGrounded;
+        public bool isGrounded;              
 
         [SerializeField] private GameObject _fire;
         [SerializeField] private Transform _fireSpawnPosition;
-        private bool Fire;
+        private bool isStop = false;
 
 
         [SerializeField] private GameObject _gran;
         [SerializeField] private Transform _granSpawnPosition;
         private float _granPushForce = 40f;
         private float _granLifeTime = 5f;
-        private float _granFireDelay = 5f;
-        private float _granFireTime = -50f;
+        //private float _granFireDelay = 5f;
 
         [SerializeField] private Animator _anim;
+
+        [SerializeField] public Slider mySlider;
+        [SerializeField] private float _durability = 100;
+        [SerializeField] public Image myImage;
+       
 
         private void Awake()
         {
@@ -58,15 +62,30 @@ namespace MyGames
             }
 
 
-            if (Input.GetButton("Jump") && isGrounded)
+            if (Input.GetButtonDown("Jump") && isGrounded)
             {
-                isGrounded = false;
-                GetComponent<Rigidbody>().AddForce(new Vector3(0, 210, 0));
+                isGrounded = false;                
+                GetComponent<Rigidbody>().velocity = new Vector3(0, 5, 0);
+                Pauza();
             }
-
-            _anim.SetBool("isGo", _direction != Vector3.zero);
+           
+            _anim.SetBool("isGo", _direction != Vector3.zero && !Input.GetButton("Sprint"));
             _anim.SetBool("isJump", isGrounded == false);
-            _anim.SetBool("isFire", Fire == true);
+            _anim.SetBool("isFire", Input.GetButtonDown("Fire1") && isGrounded && !isStop);
+            _anim.SetBool("isRun", _isSprint && _direction != Vector3.zero);
+            _anim.SetBool("isStay", _direction == Vector3.zero);
+
+            
+            // Проверка
+            mySlider.value = _durability;
+            if (_durability <= 0)
+            {
+                myImage.enabled = false;
+            }
+            else
+            {
+                myImage.enabled = true;
+            }
         }
 
         private void FixedUpdate()
@@ -75,12 +94,11 @@ namespace MyGames
 
             if (Input.GetButtonDown("Fire1"))
             {
-                SpawnFire();
-                Fire = true;
-            }
-            else
-            {
-                Fire = false;
+                if (isGrounded && !isStop)
+                {
+                    SpawnFire();
+                }
+                           
             }
 
             if (Input.GetKeyDown(KeyCode.G))
@@ -92,28 +110,47 @@ namespace MyGames
         private void Move(float delta)
         {
             var fixedDirection = transform.TransformDirection(_direction.normalized);
-            transform.position += fixedDirection * (_isSprint ? _speed * 2 : _speed) * delta;
+            transform.position += fixedDirection * (_isSprint ? _speed * 2f : _speed) * delta;
         }
 
         private void SpawnFire()
         {
-            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation); 
-            var fireboom = fireObj.GetComponent<Fire>();
-            fireboom.Init(durability: 10);
+            StartCoroutine(Pauza());            
         }
 
         private void SpawnGran()
-        {
-                        
-            
-                //_granFireTime = Time.time;
+        {            
+                          
                 GameObject granObject = Instantiate(_gran, _granSpawnPosition.position + new Vector3(0, 1f, 0.51f), _granSpawnPosition.rotation);
                 Gran gran = granObject.GetComponent<Gran>();
-                gran.Init(_granPushForce, _granLifeTime);
-            
+                gran.Init(_granPushForce, _granLifeTime);            
+
+        }
+
+        private IEnumerator Pauza()
+        {
+                       
+            yield return new WaitForSeconds(0.4f);
+            var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation);
+            var fireboom = fireObj.GetComponent<Fire>();
+            fireboom.Init(durability: 10);
+            isStop = true;
+            yield return new WaitForSeconds(3f);
+            isStop = false;
+        }
+
+        public void Hit(float damage)
+        {
+
+            _durability -= damage;
+            if (_durability <= 0)
+            {
+                Debug.Log("Game Over");
+            }
 
         }
 
     }
+          
 
 }

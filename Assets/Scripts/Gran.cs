@@ -11,15 +11,16 @@ namespace MyGames
         public float delay = 3f; // таймер задержки
         float countdown;
 
-        bool hasExploded = false;
+        //bool hasExploded = false;
 
-        public GameObject explosionEffect;
 
         public float radius = 5f;
         public float force = 700f;
 
         private Collider _granCollider;
         private Rigidbody _granRigidbody;
+
+        [SerializeField] private GameObject explosionEffect;
 
         private void Awake()
         {

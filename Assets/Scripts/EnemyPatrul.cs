@@ -8,18 +8,12 @@ namespace MyGames
     public class EnemyPatrul : MonoBehaviour, ITakeDamage
     {
         [SerializeField] private float _durability = 50;
-        [SerializeField] private float _speedRotate = 2;
+        [SerializeField] private float _speedRotate = 4;
 
 
         [SerializeField] private Player _player;
 
-
-        [SerializeField] private GameObject _bullet;
-        [SerializeField] private Transform _SpawnPosition;
-
-
-        [SerializeField] private Animator _anim;
-        private bool fire1;
+        [SerializeField] private Animator _anim;        
 
         private NavMeshAgent _agent;
         [SerializeField] private Transform[] waypoints;
@@ -60,11 +54,7 @@ namespace MyGames
                         if (hit.collider.CompareTag("Player") && !isPaus1)
                         {
                             Attack();
-                            fire1 = true;
-                        }
-                        else
-                        {
-                            fire1 = false;
+                            
                         }
                     }
                 }
@@ -94,18 +84,8 @@ namespace MyGames
 
         }
 
-        //private void Fire()
-        //{
-        //    var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation);
-        //    var bullet = bulletObj.GetComponent<Bullet>();
-        //    bullet.Init(_player.transform, 0.5f, 4f);
-        //    StartCoroutine(Pauza());
-        //    _anim.SetBool("isAttack", true);
-        //}
-
         private void Attack()
-        {
-            
+        {            
             _anim.SetBool("isStay", false);
             _anim.SetBool("isAttack", true);
             _anim.SetBool("isRun", false);
@@ -115,7 +95,7 @@ namespace MyGames
         private void Run()
         {
             
-            _agent.speed = 3.0f;
+            _agent.speed = 1.8f;
             _anim.SetBool("isStay", false);
             _anim.SetBool("isAttack", false);
             _anim.SetBool("isRun", true);
@@ -140,17 +120,7 @@ namespace MyGames
             _anim.SetBool("isRun", false);
             _anim.SetBool("isWalk", false);
         }
-
-        public void Hit(float damage)
-        {
-
-            _durability -= damage;
-            if (_durability <= 0)
-            {
-                Destroy(gameObject);
-            }
-
-        }
+             
 
         private IEnumerator PatrulPauza()
         {
@@ -172,9 +142,17 @@ namespace MyGames
             yield return new WaitForSeconds(3f);
             Walk();
             isPaus1 = false;
-        } 
-        
-       
+        }
 
+        public void Hit(float damage)
+        {
+
+            _durability -= damage;
+            if (_durability <= 0)
+            {
+                Destroy(gameObject);
+            }
+
+        }
     }
 }

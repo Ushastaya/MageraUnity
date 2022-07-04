@@ -6,7 +6,6 @@ namespace MyGames
 {
     public class Fire : MonoBehaviour
     {
-        //[SerializeField] private float _durability; // Прочность мины
         [SerializeField] private float _damage = 10;
 
         private void OnTriggerEnter(Collider collision)
