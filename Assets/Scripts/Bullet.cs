@@ -10,7 +10,7 @@ namespace MyGames
         private Transform _target;
         private float _speed;
 
-        [SerializeField] private float _damage = 50;
+        private float _damage = 15;
        
 
         public void Init(Transform target, float lifeTime, float speed)
@@ -29,12 +29,10 @@ namespace MyGames
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
-            {
-                Debug.Log("Game");
+            {                
                 if (other.gameObject.TryGetComponent(out ITakeDamage takeDamage))
                 {
-                    takeDamage.Hit(_damage);
-                    Debug.Log("Over");
+                    takeDamage.Hit(_damage);                    
                 }
             }
             

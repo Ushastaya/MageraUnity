@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace MyGames
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, ITakeDamage, ITakeHP
     {
        
         [SerializeField] private float _speed = 1f;
@@ -30,9 +30,15 @@ namespace MyGames
         [SerializeField] private Animator _anim;
 
         [SerializeField] public Slider mySlider;
-        [SerializeField] private float _durability = 100;
+        private float _durability = 100;
+        private float _mdurability = 100;
         [SerializeField] public Image myImage;
-       
+        [SerializeField] private GameObject _gameOver;
+
+        [SerializeField] public Slider mySlider2;        
+        private float _mana = 100;
+        [SerializeField] public Image myImage2;
+        private float trata = 15;       
 
         private void Awake()
         {
@@ -41,11 +47,12 @@ namespace MyGames
 
         }
 
-        void OnCollisionEnter()
+        private void Start()
         {
-            isGrounded = true;
-        }
 
+            Time.timeScale = 1;
+
+        }
 
         private void Update()
         {
@@ -71,12 +78,11 @@ namespace MyGames
            
             _anim.SetBool("isGo", _direction != Vector3.zero && !Input.GetButton("Sprint"));
             _anim.SetBool("isJump", isGrounded == false);
-            _anim.SetBool("isFire", Input.GetButtonDown("Fire1") && isGrounded && !isStop);
+            _anim.SetBool("isFire", Input.GetButtonDown("Fire1") && isGrounded && !isStop && _mana >= trata);
             _anim.SetBool("isRun", _isSprint && _direction != Vector3.zero);
             _anim.SetBool("isStay", _direction == Vector3.zero);
 
-            
-            // Проверка
+                        
             mySlider.value = _durability;
             if (_durability <= 0)
             {
@@ -86,13 +92,25 @@ namespace MyGames
             {
                 myImage.enabled = true;
             }
+
+            
+            mySlider2.value = _mana;
+            if (_mana <= 0)
+            {
+                myImage2.enabled = false;
+            }
+            else
+            {
+                myImage2.enabled = true;
+            }                        
+           
         }
 
         private void FixedUpdate()
         {
             Move(Time.fixedDeltaTime);
-
-            if (Input.GetButtonDown("Fire1"))
+                        
+            if (Input.GetButtonDown("Fire1") && _mana >= trata)
             {
                 if (isGrounded && !isStop)
                 {
@@ -105,6 +123,8 @@ namespace MyGames
             {
                 SpawnGran();
             }
+
+           
         }
 
         private void Move(float delta)
@@ -129,14 +149,19 @@ namespace MyGames
 
         private IEnumerator Pauza()
         {
-                       
+            _mana -= trata;
             yield return new WaitForSeconds(0.4f);
             var fireObj = Instantiate(_fire, _fireSpawnPosition.position, _fireSpawnPosition.rotation);
             var fireboom = fireObj.GetComponent<Fire>();
             fireboom.Init(durability: 10);
             isStop = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             isStop = false;
+        }
+
+        void OnCollisionEnter()
+        {
+            isGrounded = true;
         }
 
         public void Hit(float damage)
@@ -145,12 +170,28 @@ namespace MyGames
             _durability -= damage;
             if (_durability <= 0)
             {
-                Debug.Log("Game Over");
+                _gameOver.SetActive(true);
             }
 
         }
 
-    }
+        public void Medicine(float HP)
+        {
+
+            _durability += HP;
+            if (_durability < _mdurability)
+            {
+                _durability += HP;
+
+                if (_durability > _mdurability)
+                {
+                    _durability = _mdurability;
+                }
+            }
+
+        }
+        
+}
           
 
 }

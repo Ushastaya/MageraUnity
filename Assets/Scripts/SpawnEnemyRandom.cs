@@ -45,8 +45,8 @@ namespace MyGames
         void SpawnVrag()
         {
 
-            randomX = Random.Range(0f, 4f); // в пределах каких координат X будет спавн объекта
-            randomZ = Random.Range(4f, 7f); // в пределах каких координат Z будет спавн объекта
+            randomX = Random.Range(1f, 3f); // в пределах каких координат X будет спавн объекта
+            randomZ = Random.Range(4f, 6f); // в пределах каких координат Z будет спавн объекта
             whereToSpawn = new Vector3(randomX, 0f, randomZ); // прописываем рандомное X и Z, а Y вегда одна. это место появление врага
             Instantiate(enemy, whereToSpawn, Quaternion.identity); // метод самого свавна
 

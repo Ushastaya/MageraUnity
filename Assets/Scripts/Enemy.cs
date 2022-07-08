@@ -6,8 +6,8 @@ namespace MyGames
 {
     public class Enemy : MonoBehaviour, ITakeDamage
     {
-        [SerializeField] private float _durability = 50;
-        [SerializeField] private float _speedRotate = 2;
+        private float _durability = 50;
+        private float _speedRotate = 2;
 
 
         [SerializeField] private Player _player;
@@ -18,7 +18,7 @@ namespace MyGames
         [SerializeField] private Transform _SpawnPosition1;
 
         [SerializeField] private Animator _anim;
-        private bool fire1;
+        private bool fire1;        
         private bool isPaus1 = false;        
 
         private void Awake()
@@ -34,16 +34,18 @@ namespace MyGames
 
             Ray ray = new Ray(_SpawnPosition1.position, transform.forward);
 
+            
+
             if (Physics.Raycast(ray, out RaycastHit hit, 3))
             {
                 if (hit.collider.CompareTag("Player") && !isPaus1)
                 {
+                    fire1 = true;                    
                     Fire();
-                    fire1 = true;
                 }
                 else
                 {
-                    fire1 = false;
+                    fire1 = false;                    
                 }
             }
 
@@ -64,7 +66,7 @@ namespace MyGames
 
         private void Fire()
         {
-            var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation); 
+            var bulletObj = Instantiate(_bullet, _SpawnPosition.position, _SpawnPosition.rotation);
             var bullet = bulletObj.GetComponent<Bullet>();
             bullet.Init(_player.transform, 2f, 3f);
             StartCoroutine(Pauza());
@@ -77,7 +79,7 @@ namespace MyGames
             yield return new WaitForSeconds(3f);
             isPaus1 = false;
         }
-
+                
         public void Hit(float damage)
         {
             

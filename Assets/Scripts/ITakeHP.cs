@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace MyGames
 {
-    public interface ITakeDamage
+    public interface ITakeHP
     {
-        public void Hit(float damage);
-    }    
+        public void Medicine(float HP);
+    }
 }

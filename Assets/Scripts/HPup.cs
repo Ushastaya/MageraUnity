@@ -6,26 +6,26 @@ namespace MyGames
 {
     public class HPup : MonoBehaviour
     {
-        public bool rotate; // Нужен поворот?
-
+        public bool rotate; 
         public float rotationSpeed;
 
-        //void Update()
-        //{
+        private float HP = 50;
 
-        //    if (rotate)
-        //        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
-
-        //}
-
-        private void OnTriggerEnter(Collider other)
+        public void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.gameObject.TryGetComponent(out ITakeHP takeHP))
             {
 
-                Destroy(gameObject);
+                if (other.CompareTag("Player"))
+                {
+                    takeHP.Medicine(HP);
+                    Destroy(gameObject);
+                }
 
             }
+                
         }
+
+        
     }
 }

@@ -7,8 +7,8 @@ namespace MyGames
 {
     public class EnemyPatrul : MonoBehaviour, ITakeDamage
     {
-        [SerializeField] private float _durability = 50;
-        [SerializeField] private float _speedRotate = 4;
+        private float _durability = 50;
+        private float _speedRotate = 4;
 
 
         [SerializeField] private Player _player;
@@ -21,6 +21,7 @@ namespace MyGames
         int m_CurrentWayPointIndex;
         private bool isPaus = false;
         private bool isPaus1 = false;
+        
 
         private void Awake()
         {
@@ -143,6 +144,15 @@ namespace MyGames
             Walk();
             isPaus1 = false;
         }
+
+        //private IEnumerator PauzaUdara()
+        //{
+        //    isPaus2 = true;
+        //    Stay();
+        //    yield return new WaitForSeconds(3f);
+        //    Walk();
+        //    isPaus2 = false;
+        //}
 
         public void Hit(float damage)
         {
